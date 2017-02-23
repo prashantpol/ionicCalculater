@@ -6,6 +6,13 @@
 var app =angular.module('calculator', ['ionic','ui.bootstrap']);
 
  app.controller('main', function ($scope, $ionicModal) { //store the entities name in a variable var taskData = 'task';
+$scope.firstOperand="";
+$scope.result="";
+$scope.buttonTouched=function (num) {
+  $scope.firstOperand=$scope.firstOperand+num;
+  $scope.result=$scope.firstOperand;
+  console.log('clicked');
+}
 
 $scope.test="Calculator";
 
